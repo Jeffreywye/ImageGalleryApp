@@ -1,8 +1,11 @@
 import React from 'react';
+import UploadFormComponent from "../components/UploadFormComponent/UploadFormComponent.js";
 
 function Upload() {
     return(
-        <h1>Upload</h1>
+        <div className = "container">
+            <UploadFormComponent/>
+        </div>
     );
 }
 

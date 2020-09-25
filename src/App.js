@@ -3,17 +3,14 @@ import './App.css';
 import { BrowserRouter as Router, Link, Switch, Route, Redirect } from 'react-router-dom';
 import Upload from "./pages/Upload.js"
 import Home from "./pages/Home.js"
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="#">Navbar</a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <nav className="navbar  navbar-light bg-light">
+          <div className="" id="navbarNavAltMarkup">
             <ul className="navbar-nav">
               <li className="nav-item">
                 <Link className="nav-link" to="/">Gallery</Link>
@@ -27,6 +24,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home}></Route>
           <Route exact path="/upload" component={Upload}></Route>
+          <Route exact path="/404" component={NotFound}></Route>
+          <Redirect to="/404"></Redirect>
         </Switch>
       </Router>
     </div>
