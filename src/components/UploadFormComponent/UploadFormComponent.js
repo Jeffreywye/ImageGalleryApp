@@ -30,12 +30,17 @@ const UploadFormComponent = (props) => {
             setSelectedFile(reader.result);
         };
         reader.onerror = () => {
-            console.log("Error");
+            console.log("Error on previewFile");
         }
     }
 
     const uploadFile = async (base64File) => {
         try {
+            await fetch("/api/upload",{
+                method: 'POST',
+                body: JSON.stringify({ data: base64File }),
+                headers: { 'Content-Type': 'application/json' },
+            });
             setSelectedFile("");
         } catch (error) {
             console.log(error);
