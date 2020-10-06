@@ -42,6 +42,7 @@ const UploadFormComponent = (props) => {
                 headers: { 'Content-Type': 'application/json' },
             });
             setSelectedFile("");
+            console.log("success");
         } catch (error) {
             console.log(error);
         }
