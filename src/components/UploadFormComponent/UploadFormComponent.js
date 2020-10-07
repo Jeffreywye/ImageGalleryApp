@@ -2,7 +2,6 @@ import React, {useState,useEffect}  from 'react';
 import PreviewComponent from "../PreviewComponent/PreviewComponent.js";
 
 
-
 const UploadFormComponent = (props) => {
 
     const [_selected_file, setSelectedFile] = useState();

@@ -1,8 +1,11 @@
 import React from 'react';
+import ImageGalleryComponent from "../components/ImageGalleryComponent/ImageGalleryComponent.js";
 
 function Home() {
     return(
-        <h1>Home</h1>
+        <div className = "container">
+            <ImageGalleryComponent/>
+        </div>
     );
 }
 
